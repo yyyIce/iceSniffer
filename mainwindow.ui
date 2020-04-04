@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1011</width>
+    <height>690</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabw_main">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;捕获&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;捕获&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_cap">
+       <attribute name="title">
+        <string>捕获</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="hl_capfilter">
+          <item>
+           <widget class="QLabel" name="lb_cap_filter">
+            <property name="text">
+             <string>捕获过滤器：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="le_cap_filter"/>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <layout class="QVBoxLayout" name="vl_view">
+          <item>
+           <widget class="QTableWidget" name="tw_cap_list">
+            <property name="autoFillBackground">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTreeWidget" name="tree_proto">
+            <column>
+             <property name="text">
+              <string notr="true">1</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="te_hex"/>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="hl_nic" stretch="1,200">
+            <item>
+             <widget class="QLabel" name="lb_nic">
+              <property name="text">
+               <string>网络适配器：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbox_nic">
+              <property name="editable">
+               <bool>true</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>请选择网络适配器</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <layout class="QHBoxLayout" name="hl_nic_btn">
+            <item>
+             <widget class="QPushButton" name="btn_start">
+              <property name="text">
+               <string>开始</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_stop">
+              <property name="text">
+               <string>停止</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QHBoxLayout" name="hl_show_filter_and_btn">
+          <item>
+           <layout class="QHBoxLayout" name="hl_show_filter" stretch="1,200">
+            <item>
+             <widget class="QLabel" name="lb_showfilter">
+              <property name="text">
+               <string>显示过滤器：</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="cbox_showfilter">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="editable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_showfilter_apply">
+            <property name="text">
+             <string>过滤</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_statics">
+       <attribute name="title">
+        <string>统计</string>
+       </attribute>
+       <widget class="QCustomPlot" name="widget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>20</y>
+          <width>801</width>
+          <height>561</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>40</y>
+          <width>94</width>
+          <height>495</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="vl_left_info">
+         <item>
+          <layout class="QVBoxLayout" name="vl_tuli">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 0, 0);
+</string>
+             </property>
+             <property name="text">
+              <string>ARP ---</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 0, 255);</string>
+             </property>
+             <property name="text">
+              <string>ICMP ---</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 255);</string>
+             </property>
+             <property name="text">
+              <string>UDP ---</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 255, 0);</string>
+             </property>
+             <property name="text">
+              <string>TCP ---</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 175, 175);</string>
+             </property>
+             <property name="text">
+              <string>HTTP ---</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="vl_statics">
+           <item>
+            <widget class="QLabel" name="lb_ip_cnt">
+             <property name="text">
+              <string>IP数据包：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="le_ip_cnt"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="lb_arp_cnt">
+             <property name="text">
+              <string>ARP数据包：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="le_arp_cnt"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="lb_icmp_cnt">
+             <property name="text">
+              <string>ICMP数据包：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="le_icmp_cnt"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="lb_udp_cnt">
+             <property name="text">
+              <string>UDP数据包：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="le_udp_cnt"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="lb_tcp_cnt">
+             <property name="text">
+              <string>TCP数据包：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="le_tcp_cnt"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="lb_http_cnt">
+             <property name="text">
+              <string>HTTP数据包：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="le_http_cnt"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="lb_other_cnt">
+             <property name="text">
+              <string>其他类型：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="le_other_cnt"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="lb_sum_cnt">
+             <property name="text">
+              <string>总数：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="le_sum_cnt"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1011</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="geometry">
+     <rect>
+      <x>385</x>
+      <y>116</y>
+      <width>137</width>
+      <height>126</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionopenfile"/>
+    <addaction name="actionsavefile"/>
+    <addaction name="actionexit"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionopenfile">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="actionsavefile">
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="actioncapfilter">
+   <property name="text">
+    <string>捕获过滤器</string>
+   </property>
+  </action>
+  <action name="actionsearchfilter">
+   <property name="text">
+    <string>HTTP协议分析</string>
+   </property>
+  </action>
+  <action name="actionexit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header location="global">qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
